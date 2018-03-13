@@ -38,7 +38,7 @@ namespace Lockstep
             MainSettings = settings;
             if (MainSettings == null)
             {
-                settings = Resources.Load<LSFSettings>(DEFAULT_SETTINGS_NAME);
+				MainSettings = Resources.Load<LSFSettings>(DEFAULT_SETTINGS_NAME);
                 Debug.Log("No settings found. Loading default settings.");
             }
 

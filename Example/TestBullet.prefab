@@ -5,12 +5,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 486318}
-  - 33: {fileID: 3388618}
-  - 23: {fileID: 2351774}
-  - 114: {fileID: 11405872}
+  - component: {fileID: 486318}
+  - component: {fileID: 3388618}
+  - component: {fileID: 2351774}
+  - component: {fileID: 11405872}
   m_Layer: 0
   m_Name: TestBullet
   m_TagString: Untagged
@@ -30,6 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2351774
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -39,22 +40,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: b30447a543b0c4e6b9494c581702fd8c, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &3388618
 MeshFilter:
@@ -74,23 +81,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e14365092354525b827ca9117ed940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Position:
+    x: 0
+    y: 0
+    z: 0
   _speed: 1048576
   _visualArc: 1
   _delay: 0
   _attachEndEffectToTarget: 0
-  _endEffect: 
+  _hitFX: 
   CanRotate: 1
-  _startEffect: Muzzle Ball
+  _startFX: Muzzle Ball
   IsActive: 0
   UseEffects: 1
   _canVisualize: 1
-  _interpolationRate: 8
   _exclusiveTargetType: 0
   _targetingBehavior: 1
-  _targetPlatform: 0
   _hitBehavior: 0
   _angle: 32768
   _radius: 131072
+  _lastingDuration: 0
+  _tickRate: 8
+  DoReleaseChildren: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
